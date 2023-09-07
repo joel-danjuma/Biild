@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="gradient " />
         </div>
         <Nav />
-        <main>{children}</main>
+        <main className="scroll-smooth">{children}</main>
       </body>
     </html>
   );

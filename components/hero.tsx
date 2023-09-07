@@ -28,9 +28,9 @@ import {
 
 const Hero = () => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full min-h-screen">
       <div className="relative overflow-hidden min-h-screen">
-        <div className="container mx-auto pt-40 lg:pt-60 pb-0">
+        <div className="container mx-auto pt-20 lg:pt-40 pb-0">
           <div className="flex lg:flex-row flex-col items-center">
             <div className="flex space-y-20 items-center lg:p-0 p-2">
               <div className="container mx-auto">
