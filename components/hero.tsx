@@ -83,37 +83,35 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <FallInPlace delay={0.6}>
-          <Features
-            className="container mx-auto pt-20"
-            features={[
-              {
-                title: "Accessible",
-                description:
-                  "All components strictly follow WAI-ARIA standards.",
-                icon: FiSmile,
-              },
-              {
-                title: "Themable",
-                description:
-                  "Fully customize all components to your brand with theme support and style props.",
-                icon: FiSliders,
-              },
-              {
-                title: "Composable",
-                description:
-                  "Compose components to fit your needs and mix them together to create new ones.",
-                icon: FiGrid,
-              },
-              {
-                title: "Productive",
-                description:
-                  "Designed to reduce boilerplate and fully typed, build your product at speed.",
-                icon: FiThumbsUp,
-              },
-            ]}
-          />
-        </FallInPlace>
+
+        {/* <Features
+          className="container mx-auto pt-20"
+          features={[
+            {
+              title: "Accessible",
+              description: "All components strictly follow WAI-ARIA standards.",
+              icon: FiSmile,
+            },
+            {
+              title: "Themable",
+              description:
+                "Fully customize all components to your brand with theme support and style props.",
+              icon: FiSliders,
+            },
+            {
+              title: "Composable",
+              description:
+                "Compose components to fit your needs and mix them together to create new ones.",
+              icon: FiGrid,
+            },
+            {
+              title: "Productive",
+              description:
+                "Designed to reduce boilerplate and fully typed, build your product at speed.",
+              icon: FiThumbsUp,
+            },
+          ]}
+        /> */}
       </div>
     </section>
   );
