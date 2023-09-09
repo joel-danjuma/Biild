@@ -1,31 +1,31 @@
 "use client";
 import { FallInPlace } from "./motion/fall_in_place";
-import { ScrollTrigger } from "gsap/all";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { gsap } from "gsap";
+import { motion } from "framer-motion";
+// import Image from "next/image";
+// import { gsap } from "gsap";
 import React from "react";
 
 const Nav = () => {
   //   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [open, setOpen] = useState(false);
   const navigation = ["About", "Services", "Contact"];
-  gsap.set(".nav-bg", {
-    backgroundColor: "#232323",
-    opacity: 0,
-  });
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      start: "top += 200px",
-      end: "+=1",
-      toggleActions: "play none none reverse",
-      scrub: 2,
-    },
-  });
-  tl.to(".nav-bg", {
-    opacity: 1,
-  });
+  // gsap.set(".nav-bg", {
+  //   backgroundColor: "#232323",
+  //   opacity: 0,
+  // });
+  // const tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     start: "top += 200px",
+  //     end: "+=1",
+  //     toggleActions: "play none none reverse",
+  //     scrub: 2,
+  //   },
+  // });
+  // tl.to(".nav-bg", {
+  //   opacity: 1,
+  // });
   return (
     <header className="sticky top-0 flex w-full z-10">
       <div id="nav-bg" className="-z-1 nav-bg"></div>
@@ -71,7 +71,7 @@ const Nav = () => {
                   </svg>
                 </button>
                 {open && (
-                  <div className="absolute left-0 top-0 min-w-full min-h-screen glassmorphism items-center flex flex-col mt-20 w-full space-y-5 lg:hidden ">
+                  <div className="absolute left-0 top-0 min-w-full min-h-screen glassmorphism items-center flex flex-col mt-14 w-full space-y-5 lg:hidden ">
                     <>
                       {navigation.map((item, index) => (
                         <Link
@@ -124,6 +124,11 @@ const Nav = () => {
           </div>
         </nav>
       </FallInPlace>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      ></motion.div>
     </header>
   );
 };
