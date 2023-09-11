@@ -53,9 +53,6 @@ const Hero = () => {
                 </div>
                 {""}
                 <FallInPlace delay={0.8}>
-                  <div className="flex flex-row pt-8 pb-8">
-                    <Image src={img} alt="img" height={28}></Image>
-                  </div>
                   <div className="space-x-4 items-center">
                     <button className="max-w-lg p-2 bg-purple-500 rounded-xl border border-gray-500">
                       <Link href="#">Contact</Link>
