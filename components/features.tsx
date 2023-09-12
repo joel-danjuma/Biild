@@ -1,86 +1,37 @@
-// import * as React from "react";
-// import { SectionTitle } from "./sectionTitle";
+import Image from "next/image";
 
-// const Revealer = ({ children }: any) => {
-//   return children;
-// };
-
-// export const Features = (props: any) => {
-//   const {
-//     title,
-//     description,
-//     features,
-//     columns = [1, 2, 3],
-//     spacing = 8,
-//     align: alignProp = "center",
-//     iconSize = 8,
-//     aside,
-//     reveal: Wrap = Revealer,
-//     ...rest
-//   } = props;
-
-//   const align = !!aside ? "left" : alignProp;
-
-//   const ip = align === "left" ? "left" : "top";
-
-//   return (
-//     <section {...rest}>
-//       <div className="flex flex-row h-full items-start">
-//         <div className="flex flex-1 gap-4 items-stretch">
-//           {(title || description) && (
-//             <>
-//               <SectionTitle
-//                 title={title}
-//                 description={description}
-//                 align={align}
-//               />
-//             </>
-//           )}
-//           <div className={`grid gird-col-${columns} gap-[${spacing}]`}>
-//             {features.map((feature: {}, i: any) => {
-//               return <div key={i}></div>;
-//             })}
-//           </div>
-//         </div>
-//         {aside && <div className="flex-1 p-8">{aside}</div>}
-//       </div>
-//     </section>
-//   );
-// };
-
-import React from "react";
-
-export const Feature = ({ title, description, icon }: any) => {
-  return (
-    <div className="flex flex-col">
-      {icon && <div>{icon}</div>}
-      <div>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
+type FeatureProps = {
+  // image: any;
+  title: string;
+  description: string;
 };
 
-export const Features = ({ title, description, features }: any) => {
+const Features = (props: FeatureProps) => {
   return (
     <section>
-      <div className="flex flex-row">
-        <div className="flex-1">
-          {title ||
-            (description && (
+      <div className="relative items-center w-full px-5 pt-24 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+        <div className="max-w-xl py-12 mx-auto lg:max-w-7xl">
+          <div>
+            <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:space-y-0 lg:text-center">
               <div>
-                <h1>{title}</h1>
-                <p>{description}</p>
+                <div>
+                  <div className="flex items-center justify-center w-12 h-12 text-black bg-gray-100 rounded-xl lg:mx-auto">
+                    ❖
+                  </div>
+                  <p className="mt-4 text-lg font-medium leading-6 text-black">
+                    {props.title}
+                  </p>
+                </div>
+                <div className="mt-4 text-base text-gray-500">
+                  {props.title}
+                </div>
               </div>
-            ))}
-          <div className={`grid grid-cols-[${features.length}]`}>
-            {features.map((feature: {}, i: number) => (
-              <Feature key={i} {...feature} />
-            ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+export default Features;
